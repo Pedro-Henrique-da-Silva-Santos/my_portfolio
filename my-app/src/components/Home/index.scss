@@ -13,9 +13,31 @@
         color: #fff;
         font-size: 53px;
         margin: 0;
+        font-family: "Impact";
+        font-weight: 400;
 
-        img{
-            
+        &::before {
+            content: "<h1>";
+            font-family: 'La Belle Aurore';
+            color: #ffd700;
+            font-size: 18px;
+            position: absolute;
+            margin-top: -40px;
+            left: 65px;
+            opacity: 0.6;
         }
+
+        &::after{
+            content: '<h1/>';
+            font-family: 'La Belle Aurore';
+            color: #ffd700;
+            font-size: 18px;
+            position: absolute;
+            margin-top: 30px;
+            margin-left: 40px;
+            animation: fadeIn 1s 1.7s backwards;
+            opacity: 0.6;
+        }
+
     }
 }
