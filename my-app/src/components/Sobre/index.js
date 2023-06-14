@@ -4,11 +4,13 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { 
     faHtml5, 
     faCss3,
-    faGitAlt,
     faJsSquare,
     faReact,
+    faBootstrap,
+    faGithub,
 } from '@fortawesome/free-brands-svg-icons';
 import './index.scss'
+import Loader from 'react-loaders';
 
 const Sobre = () => {
 
@@ -20,6 +22,7 @@ const Sobre = () => {
     }, []);
 
     return(
+    <>   
     <div className='container sobre-page'>
         <div className='text-zone'>
             <h1>
@@ -46,17 +49,22 @@ const Sobre = () => {
                     <FontAwesomeIcon icon={faCss3} color="#28A4D9"/>
                 </div>                
                 <div className='face3'>
-                    <FontAwesomeIcon icon={faGitAlt} color="#EC4D28"/>
+                    <FontAwesomeIcon icon={faBootstrap} color="#B509FF"/>
                 </div>                
                 <div className='face4'>
                     <FontAwesomeIcon icon={faJsSquare} color="#EDF81D"/>
                 </div>
                 <div className='face5'>
                     <FontAwesomeIcon icon={faReact} color="#5ED4F4"/>
+                </div>                
+                <div className='face6'>
+                    <FontAwesomeIcon icon={faGithub} color="#FFF"/>
                 </div>
             </div>
         </div>
     </div>
+    <Loader type="pacman"/>
+    </> 
     )
 }
 
