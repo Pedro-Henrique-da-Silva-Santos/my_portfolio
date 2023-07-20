@@ -1,6 +1,8 @@
 .form-contato{
     width: 100%;
     margin-top: 20px;
+    float: left;
+    
 
     ul{
         padding: 0;
@@ -42,6 +44,7 @@
         color: #fff;
         padding: 0 20px;
         box-sizing: border-box;
+        border-radius: 15px;
     }
 
     textarea{
@@ -54,9 +57,13 @@
         padding: 20px;
         box-sizing: border-box;
         min-height: 150px;
+        border-radius: 15px;
+        
     }
     
     .flat-button {
+        width: 100%;
+        height: 50px;
         color: aqua;
         background: 0 0;
         font: 11px;
@@ -64,7 +71,60 @@
         text-decoration: none;
         padding: 8px 10px;
         border: 1px solid aqua;
-        float: right;
-        border-radius: 5px;
-    }
+        float: left;
+        border-radius: 15px;
+        cursor: pointer;
+        transition: all 2s ease-out;
+
+        &:hover {
+            background: aqua;
+            color: black;   
+        }        
+    }   
 }
+.map-info{
+    position: absolute;
+    background-color: #000;
+    top: 50px;
+    right: 40%;
+    z-index: 999999;
+    width: 250px;
+    padding: 30px;
+    color: #fff;
+    font-family: Impact;
+    font-size: 20px;
+    font-weight: 300;
+    opacity: 0;
+    animation: fadeIn 2s 2s;
+    animation-fill-mode: forwards;
+
+    span {
+        font-size: 20px;
+        display: block;
+        padding-top: 25px;
+        color: aqua;
+    }
+
+}
+
+.map {
+    background: rgba(8, 253, 216, 0.1);
+    float: right;
+    position: absolute;
+    width: 55%;
+    height: 100%;
+    right: 30px;
+
+}
+
+.leaflet-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    opacity: 0;
+    animation: backInRight 2s 2s;
+    animation-fill-mode: forwards;
+    
+}
+
+

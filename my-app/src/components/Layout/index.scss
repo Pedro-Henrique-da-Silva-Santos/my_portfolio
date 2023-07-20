@@ -7,6 +7,7 @@
 .top-tags {
     bottom: auto;
     top: 35px;
+
 }
 
 .tags {
@@ -17,10 +18,12 @@
     left: 120px;
     font-size: 18px;
     font-family: "Impact";
+    display: none;
 }
 
 .bottom-tag-html {
     margin-left: -20px;
+    
 }
 
 .container {
@@ -42,7 +45,7 @@
     .contato-page {
     .text-zone {
         position: absolute;
-        left: 20%;
+        left: 7%;
         top: 50%;
         transform: translateY(-50%);
         width: 35%;
@@ -61,7 +64,7 @@
             left: 10px;
 
             &::before {
-                content: '<h1>';
+                content: '';
                 color: #ffd700;
                 font-family: "La Belle Aurore";
                 font-size: 20px;
@@ -73,7 +76,7 @@
             }
 
             &::after {
-                content: '<h1 />';
+                content: '';
                 color: #ffd700;
                 font-family: "La Belle Aurore";
                 font-size: 20px;

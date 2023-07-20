@@ -1,10 +1,12 @@
 @import 'animate.css';
 @import '~loaders.css/src/animations/pacman.scss';
+@import '~loaders.css/src/animations/line-scale.scss';
 
 
 input,
 textarea {
   font-family: 'Helvetica Neue', sans-serif;
+  
 }
 
 .loader-hidden {
