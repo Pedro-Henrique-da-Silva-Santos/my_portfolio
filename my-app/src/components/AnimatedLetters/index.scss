@@ -1,3 +1,11 @@
+.text-animate-home{
+    display: inline-block;
+    opacity: 0;
+    animation: bounceIn 1s 1s;
+    animation-fill-mode: forwards;
+    min-width: 10px;
+
+}
 .text-animate{
     display: inline-block;
     opacity: 0;
@@ -20,6 +28,11 @@
 
 @for $i from 1 through 65 {
     .text-animate._#{$i}{
-        animation-delay: #{$i / 20}s;
+        animation-delay: #{$i / 10}s;
+    }
+}
+@for $i from 1 through 65 {
+    .text-animate-home._#{$i}{
+        animation-delay: #{$i / 5}s;
     }
 }
