@@ -6,16 +6,16 @@ import './index.scss';
 const Layout = () => {
 
     return (
-    
-    <div className="App">
-        
-        <Sidebar />
 
-                <Outlet />
-            
-        
-    </div>
-    
+        <div className="App">
+
+            <Sidebar />
+
+            <Outlet />
+
+
+        </div>
+
     );
 };
 

@@ -1,8 +1,9 @@
 import { Route, Routes } from 'react-router-dom';
-import Home from './components/Home';
+import Projetos from './components/Projetos';
+import Contato from './components/Contato';
 import Layout from './components/Layout';
 import Sobre from './components/Sobre';
-import Contato from './components/Contato';
+import Home from './components/Home';
 import './App.scss';
 
 
@@ -14,6 +15,7 @@ function App() {
       <Route index element={<Home />} /> 
       <Route path="sobre" element={<Sobre />} /> 
       <Route path="contato" element={<Contato />} />    
+      <Route path="projetos" element={<Projetos />} />  
     </Route>
   </Routes>
   </>

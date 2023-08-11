@@ -1,4 +1,4 @@
-import { MapContainer, TileLayer, useMap, Marker, Popup } from 'react-leaflet'
+import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
 import AnimatedLetters from '../AnimatedLetters';
 import { useState, useEffect } from 'react';
 import emailjs from '@emailjs/browser';
@@ -13,6 +13,7 @@ const Contato = () => {
     const notyf = new Notyf({
         className: 'notyf',
         duration: 5000,
+        position: { x: 'left', y: 'bottom' },
 
         types: [
             {
@@ -53,18 +54,18 @@ const Contato = () => {
         e.preventDefault();
 
 
-        emailjs.sendForm('SEU_SERVICE_ID', 'SEU_TEMPLATE_ID', refForm.current, 'SUA_PULBLIC_KEY')
+        emailjs.sendForm('service_nfa2a3k', 'template_6aojrar', refForm.current, 'r8vB_lcy4fTQ0FbvS')
             .then(
                 () => {
                     const notification = notyf.success('E-mail enviado com sucesso!');
-                    notification.on('click', ({ target, event }) => {
+                    notification.on('click', () => {
                         window.location.reload(false);
                         window.location.reset();
                     });
                 },
                 () => {
                     const notification = notyf.error('Erro ao enviar e-mail. Por favor tente novamente!');
-                    notification.on('click', ({ target, event }) => { });
+                    notification.on('click', () => { });
 
                 }
             )
@@ -102,7 +103,7 @@ const Contato = () => {
                         </form>
                     </div>
                 </div>
-                
+
                 <div className='map-zone'>
                     <div className="map-info">
                         Pedro Henrique, 20 anos

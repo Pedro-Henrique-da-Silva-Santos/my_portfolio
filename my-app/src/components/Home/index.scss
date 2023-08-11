@@ -1,10 +1,10 @@
-.home-page{
+.home-page {
     flex: 5;
     display: flex;
     justify-content: space-between;
 
 
-    .text-zone{
+    .text-zone {
         position: relative;
         display: flex;
         flex-direction: column;
@@ -12,52 +12,47 @@
         align-items: center;
         justify-content: center;
         animation: pulse 1s;
-       
+
         h1 {
-        color: #fcc729;
-        font-size: 53px;
-        margin: 0;
-        font-family: "Impact";
-        font-weight: 400;
-        
-
-    }
-
-    h2 {
-        color: #9fafca;
-        margin-left: 151px;
-        font-weight: 400;
-        font-size: 20px;
-        font-family: Impact;
-        letter-spacing: 2px;
-        animation: fadeIn 1s 1.8s backwards;
-        
-        
-        
-    }
-    
-    .flat-button {
-        color: aqua;
-        font-size: 15px;
-        font-weight: 400;
-        letter-spacing: 2px;
-        font-family: Impact;
-        text-decoration: none;
-        padding: 10px 20px;
-        border: 1px solid aqua;      
-        margin-right: 310px;
-        
-        animation: fadeIn 1s 1.8s backwards;
-        white-space: nowrap;
-
-        &:hover {
-            background: aqua;
-            color: #000;
+            color: #fcc729;
+            font-size: 53px;
+            margin: 0;
+            font-family: "Impact";
+            font-weight: 400;
         }
+
+        h2 {
+            color: #9fafca;
+            margin-left: -62px;
+            font-weight: 400;
+            font-size: 20px;
+            font-family: Impact;
+            letter-spacing: 2px;
+            animation: fadeIn 1s 1.8s backwards;
+        }
+
+        .flat-button {
+            color: aqua;
+            font-size: 20px;
+            font-weight: 400;
+            letter-spacing: 2px;
+            font-family: Impact;
+            text-decoration: none;
+            padding: 10px 20px;
+            border: 1px solid aqua;
+            margin-left: -498px;
+            animation: fadeIn 1s 1.8s backwards;
+            white-space: nowrap;
+
+            &:hover {
+                background: aqua;
+                color: #000;
+            }
+        }
+
     }
-    
-}
-    .hero-zone{
+
+    .hero-zone {
         margin: 0;
         position: relative;
         display: flex;
@@ -65,35 +60,36 @@
         flex: 2;
         align-items: center;
         justify-content: center;
-    
-        .hero{          
-            margin: 15%;       
+
+        .hero {
+            margin: 15%;
             position: relative;
             display: flex;
             flex-direction: column;
             flex: 2;
             align-items: center;
             justify-content: center;
-            
-            
+
+
+        }
+
+        .hero-image {
+            width: 35%;
+            margin-top: -150px;
+            position: absolute;
+            border-radius: 50%;
+            justify-content: center;
+            align-items: center;
+            animation: animate 2s infinite ease alternate;
+            z-index: 1;
+
+            @keyframes animate {
+                to {
+                    transform: translateY(40px)
+                }
+
             }
-        
-        .hero-image{
-        width: 35%;
-        margin-top: -150px;
-        position: absolute;
-        border-radius: 50%;
-        justify-content: center;
-        align-items: center;
-        animation: animate 2s infinite ease alternate;
-        z-index: 1;
-        @keyframes animate {
-            to{
-                transform: translateY(40px)
-            }
-            
         }
     }
-}
 
 }

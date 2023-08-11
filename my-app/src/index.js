@@ -1,7 +1,7 @@
-import React from 'react'
-import ReactDOM from 'react-dom'
-import reportWebVitals from './reportWebVitals'
 import { BrowserRouter } from 'react-router-dom'
+import reportWebVitals from './reportWebVitals'
+import ReactDOM from 'react-dom'
+import React from 'react'
 import App from './App'
 import './index.scss'
 
