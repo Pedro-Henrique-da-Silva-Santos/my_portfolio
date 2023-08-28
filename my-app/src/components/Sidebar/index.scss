@@ -1,138 +1,204 @@
 .nav-bar {
-    background: linear-gradient(to right, #9fafca, #337def);
-    width: 110px;
-    height: 100vh;
-    position: absolute;
-    top: 0;
-    z-index: 3;
-    min-height: 500px;
-
-    .logo {
-        width: 100%;
-        height: 50px;
-        display: block;
-        justify-content: center;
-        align-items: center;
-        margin-bottom: 20px;
-        padding: 8px 0;
-        cursor: pointer;
-
-        img {
-            display: block;
-            margin: 8 auto;
-            width: 95px;
-            height: auto;
-            margin-top: -10px;
-
-
-            &.sub-logo {
-                width: 100px;
-            }
-        }
-    }
-
-    nav {
-        display: block;
-        text-align: center;
+        background: linear-gradient(to right, #9fafca, #337def);
+        width: 110px;
+        height: 100vh;
         position: absolute;
-        height: 210px;
-        top: 50%;
-        margin-top: -120px;
-        width: 100%;
+        top: 0;
+        z-index: 3;
+        
 
-        a {
-            font-size: 25px;
-            color: #4d4d4e;
-            display: block;
-            line-height: 50px;
-            height: 50px;
+        @media screen and (max-width: 768px) {
+            background: linear-gradient(to bottom, #9fafca, #337def);
             position: relative;
-            text-decoration: none;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            height: 10%;
+            width: 100%;
+            flex:1;
+            
 
-            i {
-                transition: all 0.3s ease-in-out;
+        }
+
+        .logo {
+            width: 100%;
+            height: 50px;
+            display: block;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+            padding: 8px 0;
+            cursor: pointer;
+
+            @media screen and (max-width: 768px) {
+                display: none;
+                
             }
 
-            &:hover {
-                color: #fff;
-
-                svg {
-                    opacity: 0;
-                }
-
-                &:after {
-                    opacity: 1;
-                }
-            }
-
-            &:after {
-                content: '';
-                font-size: 15px;
-                letter-spacing: 2px;
-                position: absolute;
-                bottom: 0;
+            img {
                 display: block;
-                width: 100%;
-                text-align: center;
-                opacity: 0;
-                transition: all 0.3s ease-out;
-            }
+                margin: 8 auto;
+                width: 95px;
+                height: auto;
+                margin-top: -10px;
 
-            &:first-child {
-                &:after {
-                    content: 'Home';
-
+                @media screen and (max-width: 768px){
+                    display: none;
+                    
                 }
             }
         }
 
-        a.sobre-link {
-            &:after {
-                content: 'Sobre';
+        nav {
+            display: block;
+            text-align: center;
+            position: relative;
+            height: 210px;
+            top: 50%;
+            margin-top: -120px;
+            width: 100%;
+
+            @media screen and (max-width: 768px) {
+                position: relative;
+                display: flex;     
+                align-items: center;
+                justify-content: center;
+                margin: 0;
+                top: 0;
+                height: 100px;
+                
+                
+                
+                
             }
-        }
+            
 
-        a.contato-link {
-            &:after {
-                content: 'Contato';
-            }
-        }
-
-        a.active {
-            svg {
-                color: #fff;
-            }
-        }
-    }
-
-    ul {
-        position: absolute;
-        bottom: 20px;
-        width: 100%;
-        display: block;
-        padding: 0;
-        list-style: none;
-        text-align: center;
-        margin: 0;
-
-        li {
             a {
-                padding: 7px 0;
-                display: block;
                 font-size: 25px;
-                line-height: 16px;
                 color: #4d4d4e;
+                display: block;
+                line-height: 50px;
+                height: 50px;
+                position: relative;
+                text-decoration: none;
 
-                &:hover svg {
+                @media screen and (max-width: 768px) {
+                    display: flex;
+                    flex: 0.5;
+                    position: relative;
+                    text-decoration: none;
+                    justify-content: space-between;
+                    flex-direction: column;
+                    align-items: center;
+                    height: auto;
+                    
+                }
+
+                i {
+                    transition: all 0.3s ease-in-out;
+                }
+
+                &:hover {
+                    color: #fff;
+
+                    svg {
+                        opacity: 0;
+                    }
+
+                    &:after {
+                        opacity: 1;
+                    }
+                }
+
+                &:after {
+                    content: '';
+                    font-size: 15px;
+                    letter-spacing: 2px;
+                    position: absolute;
+                    bottom: 0;
+                    display: block;
+                    width: 100%;
+                    text-align: center;
+                    opacity: 0;
+                    transition: all 0.3s ease-out;
+
+                    
+                }
+
+                &:first-child {
+                    &:after {
+                        content: 'Home';
+
+                    }
+                }
+                
+            }
+
+            a.sobre-link {
+                &:after {
+                    content: 'Sobre';
+                }
+            }
+
+            a.contato-link {
+                &:after {
+                    content: 'Contato';
+                }
+            }
+
+            a.active {
+                svg {
                     color: #fff;
                 }
             }
         }
-    }
-}
 
-@media screen and (max-width: 320px) {
-    .nav-bar {
-        height: 1200px;
-    }
-}
+        ul {
+            position: absolute;
+            bottom: 20px;
+            width: 100%;
+            display: block;
+            padding: 0;
+            list-style: none;
+            text-align: center;
+            margin: 0;
+
+            @media screen and (max-width: 768px) {
+                display: flex;
+                flex: 1;
+                position: relative;
+                justify-content: center;
+                align-items: center;
+                bottom: 0;
+
+                
+            }
+                
+            }
+
+            li {
+                a {
+                    padding: 7px 0;
+                    display: block;
+                    font-size: 25px;
+                    line-height: 16px;
+                    color: #4d4d4e;
+
+                    &:hover svg {
+                        color: #fff;
+                    }
+                }
+                @media screen and (max-width: 768px) {
+                    display: flex;
+                    flex: 1;
+                    position: relative;
+                    justify-content: space-between;
+                    flex-direction: column;
+                    
+                    
+                }
+                }
+            }
+    
+

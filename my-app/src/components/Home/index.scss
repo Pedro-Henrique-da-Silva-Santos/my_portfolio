@@ -3,15 +3,35 @@
     display: flex;
     justify-content: space-between;
 
+    @media screen and (max-width: 768px) {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        
+        
+    }
+
 
     .text-zone {
         position: relative;
         display: flex;
         flex-direction: column;
-        flex: 2;
+        flex: 3;
         align-items: center;
         justify-content: center;
         animation: pulse 1s;
+
+        @media screen and (max-width: 768px) {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            width: 100%;
+            
+        }
 
         h1 {
             color: #fcc729;
@@ -19,6 +39,17 @@
             margin: 0;
             font-family: "Impact";
             font-weight: 400;
+
+            @media screen and (max-width: 768px) {
+                
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                margin: 0;
+                text-align: justify;
+                font-size: 30px;
+                width: 95%;
+            }
         }
 
         h2 {
@@ -29,6 +60,17 @@
             font-family: Impact;
             letter-spacing: 2px;
             animation: fadeIn 1s 1.8s backwards;
+
+            @media screen and (max-width: 768px) {
+                
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                margin: 0;
+                text-align: justify;
+                font-size: 18px;
+                width: 95%;
+            }
         }
 
         .flat-button {
@@ -48,6 +90,17 @@
                 background: aqua;
                 color: #000;
             }
+
+            @media screen and (max-width: 768px) {
+                
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                margin-left: -250px;
+                text-align: justify;
+                font-size: 18px;
+                width: 25%;
+            }
         }
 
     }
@@ -61,6 +114,18 @@
         align-items: center;
         justify-content: center;
 
+        @media screen and (max-width: 768px) {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            width: 100%;
+            
+        }
+
+
+
         .hero {
             margin: 15%;
             position: relative;
@@ -70,7 +135,10 @@
             align-items: center;
             justify-content: center;
 
+            @media screen and (max-width: 768px) {
+                width: 100px;
 
+            }
         }
 
         .hero-image {
@@ -87,6 +155,11 @@
                 to {
                     transform: translateY(40px)
                 }
+
+            }
+
+            @media screen and (max-width: 768px) {
+                display: none;
 
             }
         }
